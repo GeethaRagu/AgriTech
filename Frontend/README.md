@@ -1,12 +1,18 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## User Experience by Role:
+Admin Workflow:
+1.	Login as admin (admin@example.com / admin123)
+2.	See "Add Resource" link in navbar
+3.	Navigate to AddResource page
+4.	Create new resources for the system
+5.	Manage all bookings and resources
+Regular User Workflow:
+1.	Login as regular user (user@example.com / password)
+2.	No "Add Resource" link visible
+3.	Can browse and book existing resources
+4.	Can view their own bookings
+5.	Cannot modify system resources
+Technical Implementation:
+•	Conditional Rendering - Admin-only navigation elements
+•	Route Protection - useEffect hooks for access control
+•	Automatic Redirects - Seamless user experience
+•	State Management - Redux selectors for role verification
